@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const BookDetails = () => {
 
     const bookDetails = useLoaderData();
+    const [readAdded, setReadAdded] = useState(false);
+    const [wishlistAdded, setWishlistAdded] = useState(false);
+
     const { id } = useParams();
 
     const idInt = parseInt(id)
@@ -11,6 +18,38 @@ const BookDetails = () => {
     const bookDetail = bookDetails.find(bookDetail => idInt === bookDetail.id)
 
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetail;
+
+    const handleRead = () => {
+
+        if (!readAdded) {
+            toast.success("Book added to Read List.");
+            setReadAdded(true);
+            setWishlistAdded(false)
+        }
+        else{
+            toast.warning("You have already added this Book.");
+        }
+
+    }
+
+
+    const handleWishList = () => {
+
+        if (!wishlistAdded) {
+            if (!readAdded) {
+                toast.success("Book added to Wishlist");
+                setWishlistAdded(true)
+            }
+
+            else {
+                toast.error("Book already added in Read List");
+            }
+        }
+        else{
+            toast.warning("Book already added in Wishlist.");
+        }
+
+    }
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
@@ -64,11 +103,13 @@ const BookDetails = () => {
                 </div>
 
                 <div className="flex gap-4">
-                    <button className="btn border-gray-600 bg-transparent text-gray-600 px-6">Read</button>
-                    <button className="btn border-cyan-600 bg-cyan-600 text-white px-6">Wishlist</button>
+                    <button onClick={handleRead} className="btn border-gray-600 bg-transparent text-gray-600 px-6">Read</button>
+                    <button onClick={handleWishList} className="btn border-cyan-600 bg-cyan-600 text-white px-6">Wishlist</button>
                 </div>
-
+                <ToastContainer />
             </div>
+
+
 
         </div>
     );
