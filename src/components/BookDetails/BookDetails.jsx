@@ -13,9 +13,9 @@ const BookDetails = () => {
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetail;
 
     return (
-        <div className="grid grid-cols-2 gap-10 pt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
 
-            <div className="mx-auto w-full h-full px-10 py-10 justify-center bg-[#8a8a8a15] rounded-xl flex items-center">
+            <div className="mx-auto w-full h-full px-10 py-10 justify-center bg-[#8a8a8a15] mf:rounded-xl flex items-center">
 
                 {/* <img src={`../../../public/images/book${idInt}.png`} alt="" className=""/> */}
 
@@ -25,7 +25,7 @@ const BookDetails = () => {
             </div>
 
 
-            <div className="space-y-3">
+            <div className="space-y-3 m-4">
                 <h1 className="text-4xl font-bold font-playfair">{bookName}</h1>
                 <h4 className="text-xl font-semibold">By: {author}</h4>
                 <hr />
@@ -40,10 +40,10 @@ const BookDetails = () => {
                 <hr />
 
                 <div className="py-2">
-                    <table>
-                        <tbody>
+                    <table className="table-fixed">
+                        <tbody className="space-x-8">
                             <tr>
-                                <td>Number of Pages: </td>
+                                <td className="pr-8 lg:pr-16">Number of Pages: </td>
                                 <td className="font-semibold">{totalPages}</td>
                             </tr>
                             <tr>
