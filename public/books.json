@@ -1,6 +1,6 @@
 [
     {
-        "bookId": 1,
+        "id": 1,
         "bookName": "To Kill a Mockingbird",
         "author": "Harper Lee",
         "image": "./images/book1.png",
@@ -8,12 +8,15 @@
         "totalPages": 281,
         "rating": 4.8,
         "category": "Fiction",
-        "tags": ["Legal Drama", "Coming-of-Age"],
+        "tags": [
+            "Legal Drama",
+            "Coming-of-Age"
+        ],
         "publisher": "J. B. Lippincott & Co.",
         "yearOfPublishing": 1960
     },
     {
-        "bookId": 2,
+        "id": 2,
         "bookName": "1984",
         "author": "George Orwell",
         "image": "./images/book2.png",
@@ -21,12 +24,15 @@
         "totalPages": 328,
         "rating": 4.7,
         "category": "Dystopian",
-        "tags": ["Politics", "Social Commentary"],
+        "tags": [
+            "Politics",
+            "Social Commentary"
+        ],
         "publisher": "Secker & Warburg",
         "yearOfPublishing": 1949
     },
     {
-        "bookId": 3,
+        "id": 3,
         "bookName": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
         "image": "./images/book3.jpg",
@@ -34,12 +40,16 @@
         "totalPages": 180,
         "rating": 4.6,
         "category": "Classic",
-        "tags": ["Fiction", "Romance", "Drama"],
+        "tags": [
+            "Fiction",
+            "Romance",
+            "Drama"
+        ],
         "publisher": "Charles Scribner's Sons",
         "yearOfPublishing": 1925
     },
     {
-        "bookId": 4,
+        "id": 4,
         "bookName": "Pride and Prejudice",
         "author": "Jane Austen",
         "image": "./images/book4.jpg",
@@ -47,12 +57,15 @@
         "totalPages": 432,
         "rating": 4.9,
         "category": "Romance",
-        "tags": ["Classic", "Regency Era"],
+        "tags": [
+            "Classic",
+            "Regency Era"
+        ],
         "publisher": "T. Egerton, Whitehall",
         "yearOfPublishing": 1813
     },
     {
-        "bookId": 5,
+        "id": 5,
         "bookName": "Harry Potter and the Sorcerer's Stone",
         "author": "J.K. Rowling",
         "image": "./images/book5.jpg",
@@ -60,12 +73,15 @@
         "totalPages": 320,
         "rating": 4.8,
         "category": "Fantasy",
-        "tags": ["Magic", "Children's Literature"],
+        "tags": [
+            "Magic",
+            "Children's Literature"
+        ],
         "publisher": "Bloomsbury",
         "yearOfPublishing": 1997
     },
     {
-        "bookId": 6,
+        "id": 6,
         "bookName": "The Catcher in the Rye",
         "author": "J.D. Salinger",
         "image": "./images/book6.jpg",
@@ -73,12 +89,15 @@
         "totalPages": 224,
         "rating": 4.7,
         "category": "Fiction",
-        "tags": ["Bildungsroman", "American Literature"],
+        "tags": [
+            "Bildungsroman",
+            "American Literature"
+        ],
         "publisher": "Little, Brown and Company",
         "yearOfPublishing": 1951
     },
     {
-        "bookId": 7,
+        "id": 7,
         "bookName": "The Silent Patient",
         "author": "Alex Michaelides",
         "image": "./images/book7.jpg",
@@ -86,12 +105,15 @@
         "totalPages": 336,
         "rating": 4.6,
         "category": "Thriller",
-        "tags": ["Psychological", "Suspense"],
+        "tags": [
+            "Psychological",
+            "Suspense"
+        ],
         "publisher": "Celadon Books",
         "yearOfPublishing": 2019
     },
     {
-        "bookId": 8,
+        "id": 8,
         "bookName": "Educated",
         "author": "Tara Westover",
         "image": "./images/book8.jpg",
@@ -99,12 +121,15 @@
         "totalPages": 352,
         "rating": 4.7,
         "category": "Memoir",
-        "tags": ["Autobiography", "Inspiring"],
+        "tags": [
+            "Autobiography",
+            "Inspiring"
+        ],
         "publisher": "Random House",
         "yearOfPublishing": 2018
     },
     {
-        "bookId": 9,
+        "id": 9,
         "bookName": "The Night Circus",
         "author": "Erin Morgenstern",
         "image": "./images/book9.jpg",
@@ -112,12 +137,15 @@
         "totalPages": 400,
         "rating": 4.5,
         "category": "Fantasy",
-        "tags": ["Magic", "Romance"],
+        "tags": [
+            "Magic",
+            "Romance"
+        ],
         "publisher": "Doubleday",
         "yearOfPublishing": 2011
     },
     {
-        "bookId": 10,
+        "id": 10,
         "bookName": "The Girl on the Train",
         "author": "Paula Hawkins",
         "image": "./images/book10.png",
@@ -125,12 +153,15 @@
         "totalPages": 336,
         "rating": 4.2,
         "category": "Thriller",
-        "tags": ["Mystery", "Suspense"],
+        "tags": [
+            "Mystery",
+            "Suspense"
+        ],
         "publisher": "Riverhead Books",
         "yearOfPublishing": 2015
     },
     {
-        "bookId": 11,
+        "id": 11,
         "bookName": "Becoming",
         "author": "Michelle Obama",
         "image": "./images/book11.jpg",
@@ -138,12 +169,15 @@
         "totalPages": 448,
         "rating": 4.8,
         "category": "Memoir",
-        "tags": ["Inspiring", "Leadership"],
+        "tags": [
+            "Inspiring",
+            "Leadership"
+        ],
         "publisher": "Crown Publishing Group",
         "yearOfPublishing": 2018
     },
     {
-        "bookId": 12,
+        "id": 12,
         "bookName": "The Goldfinch",
         "author": "Donna Tartt",
         "image": "./images/book12.jpg",
@@ -151,9 +185,11 @@
         "totalPages": 771,
         "rating": 4.3,
         "category": "Fiction",
-        "tags": ["Art", "Coming-of-Age"],
+        "tags": [
+            "Art",
+            "Coming-of-Age"
+        ],
         "publisher": "Little, Brown and Company",
         "yearOfPublishing": 2013
     }
-
 ]
