@@ -12,6 +12,8 @@ import ListedBooks from './components/ListedBooks/ListedBooks.jsx';
 import PagesToRead from './components/PagesToRead/PagesToRead.jsx';
 import Books from './components/Books/Books.jsx';
 import BookDetails from './components/BookDetails/BookDetails.jsx';
+import ReadLists from './components/ReadLists/ReadLists.jsx';
+import WishLists from './components/WishLists/WishLists.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +27,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/listed-books",
-        element: <ListedBooks></ListedBooks>
+        element: <ListedBooks></ListedBooks>,
+        children: [
+          {
+            index: true,
+            element: <ReadLists></ReadLists>
+          },
+          {
+            path: "wishlist",
+            element: <WishLists></WishLists>
+          }
+        ]
       },
       {
         path: "/page-to-read",
