@@ -26,7 +26,7 @@ const Books = () => {
 
             <h3 className="text-center text-3xl font-bold font-playfair my-6">Books</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {
                     books.slice(0, dataLength).map(book => <Book
                         key={book.id}
