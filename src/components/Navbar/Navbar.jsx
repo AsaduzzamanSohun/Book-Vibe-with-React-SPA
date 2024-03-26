@@ -7,6 +7,8 @@ const Navbar = () => {
         <li><NavLink className={({ isActive }) => isActive ? 'border border-[#23BE0A] text-[#23BE0A] font-semibold px-4 py-2 rounded-lg' : 'font-semibold px-4 py-2'} to="/">Home</NavLink></li>
         <li><NavLink className={({ isActive }) => isActive ? 'border border-[#23BE0A] text-[#23BE0A] font-semibold px-4 py-2 rounded-lg' : 'font-semibold px-4 py-2'} to="/listed-books">Listed Books</NavLink></li>
         <li><NavLink className={({ isActive }) => isActive ? 'border border-[#23BE0A] text-[#23BE0A] font-semibold px-4 py-2 rounded-lg' : 'font-semibold px-4 py-2'} to="/page-to-read">Pages to Read</NavLink></li>
+        <li><a className="btn bg-[#23BE0A] text-white lg:hidden">Sign In</a></li>
+        <li><a className="btn bg-[#59C6D2] text-white lg:hidden">Sign Up</a></li>
 
     </>
 
@@ -24,7 +26,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="text-2xl font-bold">Book Vibe</a>
+                <a className="text-2xl font-bold mx-auto lg:mx-0">Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className=" menu-horizontal px-1 gap-8">
@@ -33,7 +35,7 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end gap-4">
+            <div className="navbar-end gap-4 hidden lg:inline-flex">
                 <a className="btn bg-[#23BE0A] text-white">Sign In</a>
                 <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
             </div>
