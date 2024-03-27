@@ -36,11 +36,14 @@ const ListedBooks = () => {
 
     return (
         <div>
-            <div>
+            <div className="bg-[#13131315] py-6 rounded-2xl mb-10">
+                <p className="text-center text-3xl font-extrabold">Books</p>
+            </div>
+            <div className="text-center mb-32 lg:mb-14">
                 <details className="dropdown">
-                    <summary className="m-1 btn">open or close</summary>
-                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li onClick={() => handleBookFiler('all')}><a>Rating</a></li>
+                    <summary className="m-1 btn bg-[#23BE0A] text-white text-lg px-8 h-14">Sort By</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-52">
+                        <li onClick={() => handleBookFiler('rating')}><a>Rating</a></li>
                         <li onClick={() => handleBookFiler('pages')}><a>Number of pages</a></li>
                         <li onClick={() => handleBookFiler('published-year')}><a>Publisher year</a></li>
                     </ul>

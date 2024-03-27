@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import cover_img from '../../assets/book_cover.png'
 
 const Banner = () => {
@@ -7,7 +8,9 @@ const Banner = () => {
             <div className='space-y-10'>
 
                 <h1 className='text-xl lg:text-[52px] lg:leading-normal text-center lg:text-start font-playfair'>Books to freshen up <br /> your bookshelf</h1>
-                <a className="btn bg-[#23BE0A] text-white text-lg px-6">View The List</a>
+                <Link to="/listed-books" className="btn bg-[#23BE0A] text-white text-lg px-6">
+                    <a>View The List</a>
+                </Link>
 
             </div>
             <div>
@@ -15,7 +18,7 @@ const Banner = () => {
                 <img src={cover_img} alt="" />
 
             </div>
-            
+
         </div>
     );
 };

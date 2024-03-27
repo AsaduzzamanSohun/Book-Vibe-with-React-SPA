@@ -5,7 +5,7 @@ const ErrorPage = () => {
         <div className="min-h-screen flex flex-col gap-8 justify-center items-center">
 
             <div>
-                <h1 className="text-5xl font-semibold text-gray-500">Page not found!!</h1>
+                <h1 className="text-2xl lg:text-5xl font-semibold text-gray-500">Page not found!!</h1>
             </div>
 
             <div>

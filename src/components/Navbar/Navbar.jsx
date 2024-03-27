@@ -26,7 +26,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to="/"><a className="text-2xl font-bold ml-6 lg:mx-0">Book Vibe</a></Link>
+                <Link to="/"><a className="text-2xl font-bold ml-6 lg:mx-0 text-[#23BE0A]">Book Vibe</a></Link>
                 
             </div>
             <div className="navbar-center hidden lg:flex">
