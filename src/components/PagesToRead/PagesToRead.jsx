@@ -47,12 +47,12 @@ const PagesToRead = () => {
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF', '#FF6666', '#669999', '#99FF99', '#FFFF66', '#CC0099', '#FF6699', '#996699'];
 
     return (
-        <div className="bg-[#13131315] lg:py-24 text-xs py-8 w-full h-[400px] lg:h-[600px] my-10 rounded-xl overflow-hidden">
+        <div className="bg-[#13131315] lg:py-24 py-8 text-xs w-full h-[480px] lg:h-[600px] my-10 rounded-xl overflow-hidden">
             <div className="w-full h-full">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%" >
                 <BarChart className="mx-auto" data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
+                    <XAxis dataKey="name" interval={0}/>
                     <YAxis />
                     <Bar dataKey="uv" shape={<TriangleBar />}>
                         {
