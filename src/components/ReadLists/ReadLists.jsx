@@ -19,23 +19,23 @@ const ReadLists = () => {
 
         const storedBookIds = getStoredBookApplication();
         for (const id of storedBookIds) {
-            if(filter === 'all'){
+            if (filter === 'all') {
                 // setDisplayReadList(readLists)
                 console.log("readlist: ", readLists);
             }
-            else if(filter === 'pages'){
+            else if (filter === 'pages') {
                 const pages = books.filter(book => book.totalPages && book.id === id)
                 console.log("pages: ", pages);
                 // setDisplayReadList(pages)
             }
-            else if(filter === 'published-year'){
+            else if (filter === 'published-year') {
                 const year = books.filter(book => book.yearOfPublishing && book.id === id);
                 console.log("year: ", year);
                 // setDisplayReadList(year)
             }
         }
 
-       
+
 
 
 
@@ -82,11 +82,16 @@ const ReadLists = () => {
                 console.log("display: ", displayReadLists)
             }
 
+
+
             {
                 displayReadLists.map(read_list => <ReadList
                     key={read_list.id}
                     read_list={read_list}></ReadList>)
             }
+
+
+
 
         </div>
     );
