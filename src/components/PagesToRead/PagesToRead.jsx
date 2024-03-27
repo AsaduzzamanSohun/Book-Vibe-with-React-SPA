@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredBookApplication } from "../../utils/local-storage";
 import { BarChart, Bar, XAxis, YAxis, Cell, CartesianGrid } from 'recharts';
+import PropTypes from "prop-types"
 
 const PagesToRead = () => {
     const books = useLoaderData();
@@ -31,6 +32,7 @@ const PagesToRead = () => {
 
     }, [books])
 
+    console.log("readList", readLists);
 
     const TriangleBar = (props) => {
         const { fill, x, y, width, height } = props;
@@ -64,6 +66,15 @@ const PagesToRead = () => {
         </div>
     );
 };
+
+
+PagesToRead.propTypes = {
+    fill: PropTypes.any,
+    x: PropTypes.object,
+    y: PropTypes.object,
+    width: PropTypes.number,
+    height: PropTypes.number
+}
 
 export default PagesToRead;
 
