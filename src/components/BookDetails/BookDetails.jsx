@@ -22,10 +22,11 @@ const BookDetails = () => {
 
     const handleRead = () => {
 
-        saveBookApplication(idInt)
+        
 
         if (!readAdded) {
             toast.success("Book added to Read List.");
+            saveBookApplication(idInt)
             setReadAdded(true);
             setWishlistAdded(false)
         }
@@ -42,6 +43,7 @@ const BookDetails = () => {
             if (!readAdded) {
                 toast.success("Book added to Wishlist");
                 setWishlistAdded(true)
+                saveBookApplication(idInt)
             }
 
             else {
