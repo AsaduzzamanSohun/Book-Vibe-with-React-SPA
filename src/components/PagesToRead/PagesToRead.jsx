@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredBookApplication } from "../../utils/local-storage";
-import { BarChart, Bar, XAxis, YAxis, Cell, CartesianGrid } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Cell, CartesianGrid, ResponsiveContainer } from 'recharts';
 import PropTypes from "prop-types"
 
 const PagesToRead = () => {
@@ -27,7 +27,6 @@ const PagesToRead = () => {
 
             setReadLists(addReadList)
             setDisplayReadList(addReadList);
-
         }
 
     }, [books])
@@ -48,22 +47,25 @@ const PagesToRead = () => {
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF', '#FF6666', '#669999', '#99FF99', '#FFFF66', '#CC0099', '#FF6699', '#996699'];
 
     return (
-        <div className="bg-[#13131315] py-24 rounded-2xl">
-            <BarChart className="mx-auto" width={1100} height={600} data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Bar dataKey="uv" shape={<TriangleBar />}>
-                    {
-                        data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                        ))
-                    }
-                </Bar>
-            </BarChart>
+        <div className="bg-[#13131315] lg:py-24 text-xs py-8 w-full h-[400px] lg:h-[600px] my-10 rounded-xl overflow-hidden">
+            <div className="w-full h-full">
+            <ResponsiveContainer width="100%" height="100%">
+                <BarChart className="mx-auto" data={data}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Bar dataKey="uv" shape={<TriangleBar />}>
+                        {
+                            data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                            ))
+                        }
+                    </Bar>
+                </BarChart>
+            </ResponsiveContainer>
+            </div>
 
-
-        </div>
+        </div >
     );
 };
 
