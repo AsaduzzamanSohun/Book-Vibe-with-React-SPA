@@ -34,7 +34,7 @@ const WishLists = () => {
                                                                                      
     return (
         <div>
-            <h1>This is wishlist: {displayWishList.length}</h1>
+            {/* <h1>This is wishlist: {displayWishList.length}</h1> */}
             {
                 console.log(wishList)
             }

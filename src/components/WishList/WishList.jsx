@@ -18,18 +18,18 @@ const WishList = ({wish_list}) => {
             </div>
 
 
-            <div className="space-y-4 w-full flex flex-col flex-grow">
+            <div className="space-y-4 w-full flex flex-col flex-grow mt-4 text-center md:text-start">
                 <h1 className="text-2xl font-bold font-playfair px-2">{bookName}</h1>
                 <h4 className="text-sm font-semibold px-2">By: {author}</h4>
 
-                <div className="flex items-center gap-1 lg:gap-4 text-xs lg:text-sm">
+                <div className="flex items-center gap-1 lg:gap-4 text-xs lg:text-sm mx-auto lg:mx-1">
                     <span className="font-bold">Tag </span>
                     <span className="text-green-500 font-semibold px-1 lg:px-4 py-1 rounded-xl bg-[#21ff0418]">#{tags[0]}</span>
                     <span className="text-green-500 font-semibold px-1 lg:px-4 py-1 rounded-xl bg-[#21ff0418]">#{tags[1]}</span>
                     <span className="flex items-center Lg:gap-2"><IoLocationOutline />Year of Publishing: {yearOfPublishing}</span>
                 </div>
 
-                <div className="flex items-center gap-2 px-2 text-xs lg:text-base">
+                <div className="flex items-center gap-2 px-2 text-xs lg:text-base mx-auto lg:mx-1">
                     <LiaUserFriendsSolid />
                     <span className="mr-4">
                         Publisher: {publisher}
@@ -45,7 +45,7 @@ const WishList = ({wish_list}) => {
                     <p className="text-sky-500 font-semibold px-2 lg:px-4 py-1 rounded-xl bg-sky-100">Category: {category}</p>
                     <p className="text-amber-500 font-semibold px-2 lg:px-4 py-1 rounded-xl bg-amber-100">Rating: {rating}</p>
                     <Link className="" to={`/book/${id}`}>
-                        <p className=" text-white font-semibold px-3 lg:px-4 py-1 lg:py-2 rounded-2xl bg-green-500">
+                        <p className=" text-white font-semibold px-2 lg:px-4 py-1 lg:py-2 rounded-2xl bg-green-500">
                             View Details
                         </p>
                     </Link>
