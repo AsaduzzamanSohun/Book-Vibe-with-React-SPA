@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { saveBookApplication } from "../../utils/local-storage";
+import { saveWishListApplication } from "../../utils/wishlist-storage";
 
 const BookDetails = () => {
 
@@ -14,7 +15,7 @@ const BookDetails = () => {
     const { id } = useParams();
 
     const idInt = parseInt(id)
-    console.log("Id: ", idInt, "book details", bookDetails);
+    // console.log("Id: ", idInt, "book details", bookDetails);
 
     const bookDetail = bookDetails.find(bookDetail => idInt === bookDetail.id)
 
@@ -43,7 +44,7 @@ const BookDetails = () => {
             if (!readAdded) {
                 toast.success("Book added to Wishlist");
                 setWishlistAdded(true)
-                saveBookApplication(idInt)
+                saveWishListApplication(idInt);
             }
 
             else {

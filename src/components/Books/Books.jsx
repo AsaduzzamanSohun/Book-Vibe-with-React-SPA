@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Book from "../Book/Book";
 import { useState } from "react";
 
@@ -7,7 +7,7 @@ const Books = () => {
 
     const books = useLoaderData();
     const [dataLength, setDataLength] = useState(6)
-    const { id } = useParams();
+    // const { id } = useParams();
 
 
     const handelShowAll = () => {
@@ -19,7 +19,7 @@ const Books = () => {
 
 
 
-    console.log(id, books);
+    // console.log(id, books);
 
     return (
         <div className="my-36">
