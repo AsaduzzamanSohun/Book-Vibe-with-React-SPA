@@ -32,7 +32,7 @@ const Navbar = () => {
                 
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className=" menu-horizontal px-1 gap-8">
+                <ul className=" menu-horizontal px-1 gap-2">
                     {
                         link
                     }
