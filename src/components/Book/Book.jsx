@@ -7,8 +7,6 @@ const Book = ({ book }) => {
 
     const { id, bookName, author, image, rating, category, tags } = book;
 
-    
-
     return (
         <Link to={`book/${id}`}>
             <div className="card bg-base-100 border m-2">

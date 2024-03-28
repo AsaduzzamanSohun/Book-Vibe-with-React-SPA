@@ -16,9 +16,10 @@ const ListedBooks = () => {
 
         const storedBookIds = getStoredBookApplication();
         for (const id of storedBookIds) {
-            if (filter === 'all') {
-                setFiltering(filtering)
-                console.log("read-list: ", filtering);
+            if (filter === 'rating') {
+                const rating = books.filter(book => book.rating && book.id === id)
+                setFiltering(rating)
+                console.log("rating: ", rating);
             }
             else if (filter === 'pages') {
                 const pages = books.filter(book => book.totalPages && book.id === id)
@@ -31,8 +32,10 @@ const ListedBooks = () => {
                 setFiltering(year)
             }
         }
-
     }
+
+
+    console.log("filtering", filtering);
 
     return (
         <div>
@@ -43,9 +46,18 @@ const ListedBooks = () => {
                 <details className="dropdown">
                     <summary className="m-1 btn bg-[#23BE0A] text-white text-lg px-8 h-14">Sort By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-52">
-                        <li onClick={() => handleBookFiler('rating')}><a>Rating</a></li>
-                        <li onClick={() => handleBookFiler('pages')}><a>Number of pages</a></li>
-                        <li onClick={() => handleBookFiler('published-year')}><a>Publisher year</a></li>
+                        <Link to="">
+                            <li onClick={() => handleBookFiler('rating')}><a>Rating</a></li>
+
+                        </Link>
+                        <Link to="">
+                            <li onClick={() => handleBookFiler('pages')}><a>Number of pages</a></li>
+
+                        </Link>
+                        <Link to="">
+                            <li onClick={() => handleBookFiler('published-year')}><a>Publisher year</a></li>
+
+                        </Link>
                     </ul>
                 </details>
             </div>
@@ -67,12 +79,9 @@ const ListedBooks = () => {
                         <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                     </svg>
                     <span>Wishlist</span>
-
                 </Link>
-
-
             </div>
-            <Outlet></Outlet>
+            <Outlet setFiltering={setFiltering}></Outlet>
         </div>
     );
 };

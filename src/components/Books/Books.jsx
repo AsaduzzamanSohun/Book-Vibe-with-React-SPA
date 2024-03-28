@@ -9,15 +9,11 @@ const Books = () => {
     const [dataLength, setDataLength] = useState(6)
     // const { id } = useParams();
 
-
     const handelShowAll = () => {
 
         setDataLength(books.length)
 
     }
-
-
-
 
     // console.log(id, books);
 
@@ -38,8 +34,6 @@ const Books = () => {
             <div className={dataLength === books.length ? "hidden" : "text-center"}>
                 <button onClick={handelShowAll} className="btn bg-[#23BE0A] text-white text-lg px-6">Show All</button>
             </div>
-
-
         </div>
     );
 };

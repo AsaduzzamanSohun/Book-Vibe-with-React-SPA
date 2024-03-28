@@ -29,8 +29,6 @@ const WishLists = () => {
         }
 
     } , [books])
-
-    console.log(books);
                                                                                      
     return (
         <div>

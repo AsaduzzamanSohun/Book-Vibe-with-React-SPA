@@ -49,13 +49,8 @@ const WishList = ({wish_list}) => {
                             View Details
                         </p>
                     </Link>
-
                 </div>
-
             </div>
-
-
-
         </div>
     );
 };

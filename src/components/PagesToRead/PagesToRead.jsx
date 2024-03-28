@@ -31,7 +31,7 @@ const PagesToRead = () => {
 
     }, [books])
 
-    console.log("readList", readLists);
+    console.log("readList: ", readLists);
 
     const TriangleBar = (props) => {
         const { fill, x, y, width, height } = props;

@@ -10,14 +10,12 @@ const ReadLists = () => {
     const [readLists, setReadLists] = useState([]);
     const [displayReadLists, setDisplayReadList] = useState([]);
 
+
     // console.log(books);
     // console.log(readLists);
 
     // const book = books.map(book => console.log(book));
     // console.log(book);
-
-
-
 
     useEffect(() => {
 
@@ -44,21 +42,17 @@ const ReadLists = () => {
     return (
         <div>
 
-            
-
             {/* <h1>This is read list: {displayReadLists.length}</h1> */}
 
             {
                 console.log("display: ", displayReadLists)
             }
 
-
             {
                 displayReadLists.map(read_list => <ReadList
                     key={read_list.id}
                     read_list={read_list}></ReadList>)
             }
-
 
         </div>
     );

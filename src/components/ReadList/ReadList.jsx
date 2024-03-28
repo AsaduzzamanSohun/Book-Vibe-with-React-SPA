@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
-
 import { IoLocationOutline } from "react-icons/io5";
 import { LiaUserFriendsSolid } from "react-icons/lia";
 import { CgNotes } from "react-icons/cg";
 import { Link } from "react-router-dom";
-
-
 
 
 const ReadList = ({ read_list }) => {

@@ -13,17 +13,13 @@ const BookDetails = () => {
     const [wishlistAdded, setWishlistAdded] = useState(false);
 
     const { id } = useParams();
-
     const idInt = parseInt(id)
     // console.log("Id: ", idInt, "book details", bookDetails);
 
     const bookDetail = bookDetails.find(bookDetail => idInt === bookDetail.id)
-
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = bookDetail;
 
     const handleRead = () => {
-
-        
 
         if (!readAdded) {
             toast.success("Book added to Read List.");
@@ -34,7 +30,6 @@ const BookDetails = () => {
         else{
             toast.warning("You have already added this Book.");
         }
-
     }
 
 
@@ -54,7 +49,6 @@ const BookDetails = () => {
         else{
             toast.warning("Book already added in Wishlist.");
         }
-
     }
 
     return (
@@ -68,7 +62,6 @@ const BookDetails = () => {
                     <img className="w-64 h-[400px] m-auto" src={image} alt="" />
                 </div>
             </div>
-
 
             <div className="space-y-3 m-4">
                 <h1 className="text-4xl font-bold font-playfair">{bookName}</h1>
@@ -104,7 +97,6 @@ const BookDetails = () => {
                                 <td className="font-semibold">{rating}</td>
                             </tr>
                         </tbody>
-
                     </table>
                 </div>
 
@@ -114,9 +106,6 @@ const BookDetails = () => {
                 </div>
                 <ToastContainer />
             </div>
-
-
-
         </div>
     );
 };
