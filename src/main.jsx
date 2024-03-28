@@ -22,44 +22,43 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("../public/books.json"),
+        loader: () => fetch("/books.json"),
       },
       {
         path: "/listed-books",
         element: <ListedBooks></ListedBooks>,
-        loader: () => fetch('../public/books.json'),
+        loader: () => fetch('/books.json'),
         children: [
           {
             index: true,
             element: <ReadLists></ReadLists>,
-            loader: () => fetch('../public/books.json')
+            loader: () => fetch('/books.json')
           },
           {
             path: "wishlist",
             element: <WishLists></WishLists>,
-            loader: () => fetch('../public/book-details.json')
+            loader: () => fetch('/book-details.json')
           }
         ]
       },
       {
         path: "/page-to-read",
         element: <PagesToRead></PagesToRead>,
-        loader: () => fetch('../public/books.json')
+        loader: () => fetch('/books.json')
       },
       {
         path: "/books",
-        loader: () => fetch("../public/books.json"),
+        loader: () => fetch("/books.json"),
         element: <Books></Books> 
       },
       {
         path: "/book/:id",
         element: <BookDetails></BookDetails>,
-        loader: () => fetch("../public/book-details.json")
+        loader: () => fetch("/book-details.json")
       },
       {
         path: "/about-us",
@@ -69,8 +68,9 @@ const router = createBrowserRouter([
         path: "/career",
         element: <Career></Career>
       }
-    ]
-  },
+    ],
+    errorElement: <ErrorPage></ErrorPage>,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

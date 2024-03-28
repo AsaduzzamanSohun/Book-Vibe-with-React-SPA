@@ -1,45 +1,66 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { useLoaderData } from "react-router-dom";
-import { getStoredBookApplication } from "../../utils/local-storage";
+// import { useLoaderData } from "react-router-dom";
+// import { getStoredBookApplication } from "../../utils/local-storage";
 
 
 const ListedBooks = () => {
 
     const [tab, setTab] = useState(0);
 
-    const books = useLoaderData();
-    const [filtering, setFiltering] = useState([])
+    // const books = useLoaderData();
+    // const [filtering, setFiltering] = useState([])
 
 
-    const handleBookFiler = filter => {
+    // const handleBookFiler = filter => {
 
-        const storedBookIds = getStoredBookApplication();
-        for (const id of storedBookIds) {
-            if (filter === 'rating') {
-                const rating = books.filter(book => book.rating && book.id === id)
-                setFiltering(rating)
-                console.log("rating: ", rating);
-            }
-            else if (filter === 'pages') {
-                const pages = books.filter(book => book.totalPages && book.id === id)
-                console.log("pages: ", pages);
-                setFiltering(pages)
-            }
-            else if (filter === 'published-year') {
-                const year = books.filter(book => book.yearOfPublishing && book.id === id);
-                console.log("year: ", year);
-                setFiltering(year)
-            }
-        }
-    }
+    //     const storedBookIds = getStoredBookApplication();
+    //     for (const id of storedBookIds) {
+    //         if (filter === 'rating') {
+    //             const rating = books.filter(book => book.rating && book.id === id)
+    //             setFiltering(rating)
+    //             console.log("rating: ", rating);
+    //         }
+    //         else if (filter === 'pages') {
+    //             const pages = books.filter(book => book.totalPages && book.id === id)
+    //             console.log("pages: ", pages);
+    //             setFiltering(pages)
+    //         }
+    //         else if (filter === 'published-year') {
+    //             const year = books.filter(book => book.yearOfPublishing && book.id === id);
+    //             console.log("year: ", year);
+    //             setFiltering(year)
+    //         }
+    //     }
+    // }
 
 
-    console.log("filtering", filtering);
+    // console.log("filtering", filtering);
 
     return (
         <div>
             <div className="bg-[#13131315] py-6 rounded-2xl mb-10">
+                <p className="text-center text-3xl font-extrabold">Books</p>
+            </div>
+            <div className="text-center mb-32 lg:mb-14">
+                <details className="dropdown">
+                    <summary className="m-1 btn bg-[#23BE0A] text-white text-lg px-8 h-14">Sort By</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-52">
+                        <Link to="">
+                            <li><a>Rating</a></li>
+
+                        </Link>
+                        <Link to="">
+                            <li><a>Number of pages</a></li>
+
+                        </Link>
+                        <Link to="">
+                            <li><a>Publisher year</a></li>
+
+                        </Link>
+                    </ul>
+                </details>
+            {/* <div className="bg-[#13131315] py-6 rounded-2xl mb-10">
                 <p className="text-center text-3xl font-extrabold">Books</p>
             </div>
             <div className="text-center mb-32 lg:mb-14">
@@ -59,7 +80,7 @@ const ListedBooks = () => {
 
                         </Link>
                     </ul>
-                </details>
+                </details> */}
             </div>
             <div className="flex items-center lg:-mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
                 <Link to=""
@@ -81,7 +102,7 @@ const ListedBooks = () => {
                     <span>Wishlist</span>
                 </Link>
             </div>
-            <Outlet setFiltering={setFiltering}></Outlet>
+            <Outlet></Outlet>
         </div>
     );
 };
